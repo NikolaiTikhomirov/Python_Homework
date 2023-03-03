@@ -10,13 +10,13 @@ a = int(input())
 b = int(input())
 
 
-def find_exp(a, b):
+def find_sum(a, b):
     if a == 0 and b == 0:
         return 0
     if a >= b:
-        return find_exp(a - 1, b) + 1
+        return find_sum(a - 1, b) + 1
     if b > a:
-        return find_exp(a, b - 1) + 1
+        return find_sum(a, b - 1) + 1
 
 
-print(find_exp(a, b))
+print(find_sum(a, b))
