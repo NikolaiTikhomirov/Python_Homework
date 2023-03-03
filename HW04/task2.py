@@ -22,12 +22,12 @@ circle_list = list(map(int, input().split()))
 res = 0
 len_ = len(circle_list)
 for i in range(len_):
-    if i == 1:
-        if res < circle_list[i] + circle_list[i-1] + circle_list[len_-1]:
-            res = circle_list[i] + circle_list[i-1] + circle_list[len_-1]
-    if i == 0:
-        if res < circle_list[i] + circle_list[len_-1] + circle_list[len_-2]:
-            res = circle_list[i] + circle_list[len_-1] + circle_list[len_-2]
+    # if i == 1:
+    #     if res < circle_list[i] + circle_list[i-1] + circle_list[len_-1]:
+    #         res = circle_list[i] + circle_list[i-1] + circle_list[len_-1]
+    # if i == 0:
+    #     if res < circle_list[i] + circle_list[len_-1] + circle_list[len_-2]:
+    #         res = circle_list[i] + circle_list[len_-1] + circle_list[len_-2]
     if res < circle_list[i] + circle_list[i-1] + circle_list[i-2]:
         res = circle_list[i] + circle_list[i-1] + circle_list[i-2]
 print(res)
